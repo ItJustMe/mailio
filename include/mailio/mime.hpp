@@ -60,7 +60,7 @@ public:
     
     @todo Mixed subtype is missing.
     **/
-    enum class media_type_t {NONE, TEXT, IMAGE, AUDIO, VIDEO, APPLICATION, MULTIPART, MESSAGE};
+    enum class media_type_t {NONE, TEXT, IMAGE, AUDIO, VIDEO, APPLICATION, FONT, MODEL, MULTIPART, MESSAGE};
 
     /**
     Content type.

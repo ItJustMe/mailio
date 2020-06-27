@@ -75,7 +75,6 @@ const string message::SENDER_HEADER{"Sender"};
 const string message::REPLY_TO_HEADER{"Reply-To"};
 const string message::TO_HEADER{"To"};
 const string message::CC_HEADER{"Cc"};
-const string message::BCC_HEADER{"Bcc"};
 const string message::SUBJECT_HEADER{"Subject"};
 const string message::DATE_HEADER{"Date"};
 const string message::MIME_VERSION_HEADER{"MIME-Version"};
@@ -372,7 +371,6 @@ string message::format_header() const
     header += _reply_address.name.empty() ? "" : REPLY_TO_HEADER + COLON + reply_address_to_string() + codec::CRLF;
     header += TO_HEADER + COLON + recipients_to_string() + codec::CRLF;
     header += _cc_recipients.empty() ? "" : CC_HEADER + COLON + cc_recipients_to_string() + codec::CRLF;
-    header += _bcc_recipients.empty() ? "" : BCC_HEADER + COLON + bcc_recipients_to_string() + codec::CRLF;
 
     // TODO: move formatting datetime to a separate method
     if (!_date_time->is_not_a_date_time())

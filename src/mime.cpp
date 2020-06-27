@@ -944,6 +944,14 @@ string mime::mime_type_as_str(media_type_t media_type_val) const
             mime_str = "application";
             break;
 
+        case media_type_t::FONT:
+            mime_str = "font";
+            break;
+
+        case media_type_t::MODEL:
+            mime_str = "model";
+            break;
+
         case media_type_t::MULTIPART:
             mime_str = "multipart";
             break;
@@ -971,6 +979,10 @@ mime::media_type_t mime::mime_type_as_enum(const string& media_type_val) const
         media_type = media_type_t::VIDEO;
     else if (iequals(media_type_val, "application"))
         media_type = media_type_t::APPLICATION;
+    else if (iequals(media_type_val, "font"))
+        media_type = media_type_t::FONT;
+    else if (iequals(media_type_val, "model"))
+        media_type = media_type_t::MODEL;
     else if (iequals(media_type_val, "multipart"))
         media_type = media_type_t::MULTIPART;
     else if (iequals(media_type_val, "message"))
