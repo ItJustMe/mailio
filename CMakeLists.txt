@@ -46,8 +46,8 @@ endif(NOT SHARE_INSTALL_DIR)
 
 # options for mailio to control how the project is built.
 option(MAILIO_BUILD_SHARED_LIBRARY "Turn on to build mailio as a shared library." ON)
-option(MAILIO_BUILD_DOCUMENTATION "Turn on to build doxygen based documentation." ON)
-option(MAILIO_BUILD_EXAMPLES "Turn on to build examples." ON)
+option(MAILIO_BUILD_DOCUMENTATION "Turn on to build doxygen based documentation." OFF)
+option(MAILIO_BUILD_EXAMPLES "Turn on to build examples." OFF)
 
 # add a dependent option to build latex documentation or not.
 include(CMakeDependentOption)
